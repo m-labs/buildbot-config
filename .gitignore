@@ -1,0 +1,5 @@
+*.pyc
+*.log
+*.pid
+*.sqlite3
+secrets.json

@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+git push
 ssh lab.m-labs.hk '\
   cd /var/lib/buildbot/masters/artiq && \
   sudo -u buildbot git fetch && sudo -u buildbot git reset --hard origin/master && \

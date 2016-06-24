@@ -24,7 +24,7 @@ class XilinxCommand(ShellCommand):
       return SUCCESS
 
     def describe(self, done=False):
-        description = Test.describe(self, done)
+        description = super(XilinxCommand, self).describe(done)
         if self.timingNotMet():
             description.append('timing not met')
         return description

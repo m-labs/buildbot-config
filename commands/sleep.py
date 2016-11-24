@@ -14,5 +14,5 @@ class Sleep(BuildStep):
         reactor.callLater(self.delay, self.finished, SUCCESS)
 
     def finished(self, results):
-        self.step_status.setText(["sleeped", "%g sec" % self.delay])
+        self.step_status.setText(["slept", "%g sec" % self.delay])
         buildstep.BuildStep.finished(self, results)

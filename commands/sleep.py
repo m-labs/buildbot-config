@@ -1,3 +1,4 @@
+from twisted.internet import reactor
 from buildbot.process.buildstep import BuildStep
 from buildbot.status.results import SUCCESS
 
@@ -15,4 +16,4 @@ class Sleep(BuildStep):
 
     def finished(self, results):
         self.step_status.setText(["slept", "%g sec" % self.delay])
-        buildstep.BuildStep.finished(self, results)
+        BuildStep.finished(self, results)

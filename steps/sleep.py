@@ -7,6 +7,8 @@ class SleepStep(BuildStep):
     """A build step that does nothing for a predefined time."""
     parms = BuildStep.parms + ['delay']
 
+    name = 'sleep'
+
     def __init__(self, delay, **kwargs):
         self.delay = delay
         BuildStep.__init__(self, **kwargs)

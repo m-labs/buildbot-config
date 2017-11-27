@@ -61,6 +61,6 @@ class FunlockStep(BuildStep):
             self.step_status.setText(['unlocked', self.filename])
             self.finished(SUCCESS)
         else:
-            self.step_status.setText(['skipped', self.filename])
+            self.step_status.setText(['skipped', 'unlock', self.filename])
             self.finished(SKIPPED)
 

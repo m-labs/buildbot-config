@@ -5,7 +5,7 @@ from buildbot.steps.shell import ShellCommand
 
 class XilinxLogObserver(LogLineObserver):
     ISE_RE    = re.compile(r"\d+ constraint not met\.")
-    VIVADO_RE = re.compile(r"WARNING: \[Route \d+-\d+\] Router estimated timing not met\.")
+    VIVADO_RE = re.compile(r"Timing constraints are not met\.")
 
     def __init__(self, maxLogs=None):
         LogLineObserver.__init__(self)
